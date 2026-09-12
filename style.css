@@ -249,6 +249,7 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
+  flex-shrink: 0;
 }
 
 .control-btn {
@@ -286,6 +287,13 @@ body {
   cursor: pointer;
   transition: all var(--transition-normal);
   border: none;
+}
+
+.btn svg,
+.btn i {
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .btn-sm {
@@ -1824,6 +1832,35 @@ body {
 }
 
 /* Responsive Media Queries */
+@media (max-width: 1280px) {
+  .header-container {
+    padding: 0 16px;
+  }
+
+  .nav-menu {
+    gap: 16px;
+  }
+
+  .nav-item {
+    font-size: 0.88rem;
+  }
+
+  .controls {
+    gap: 10px;
+  }
+
+  .btn-sm {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
 @media (max-width: 992px) {
   .hero-container {
     grid-template-columns: 1fr;
@@ -1861,5 +1898,26 @@ body {
 
   .nav-menu {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0 12px;
+  }
+
+  .controls {
+    gap: 6px;
+  }
+
+  .btn-sm {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+    gap: 6px;
+  }
+
+  .control-btn {
+    width: 34px;
+    height: 34px;
   }
 }
